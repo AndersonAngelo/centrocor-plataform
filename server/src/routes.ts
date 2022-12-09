@@ -1,4 +1,4 @@
-import { Request, Response, Router } from "express";
+import { request, Request, Response, Router } from "express";
 import { Readable } from 'stream';
 import readline from 'readline';
 import multer from 'multer';
@@ -18,9 +18,16 @@ type ExamesProps = {
 
 }
 
-router.post("/exames", multerConfig.single('file'), async (request: Request, response: Response) => {
+router.get("/exames", multerConfig.single('file'), async(req: Request, res: Response) => {
 
-  const { file } = request;
+  const dataExams = await client.exames.findMany();
+
+  return res.json(dataExams);
+})
+
+router.post("/exames", multerConfig.single('file'), async (req: Request, res: Response) => {
+
+  const { file } = req;
   const { buffer } = file as any;
 
   const archiveRow = buffer.toString().split("\n");
@@ -44,25 +51,27 @@ router.post("/exames", multerConfig.single('file'), async (request: Request, res
       protocolo: lineSplit[1],
       medico: lineSplit[2],
       exame: lineSplit[3],
-      tipo_exame: lineSplit[4]
+      tipo_exame: lineSplit[5]
 
     })
+    console.log(lineSplit)
   }
+
        
-  for await (let {paciente, protocolo, medico, exame, tipo_exame} of exames) {
+  //for await (let {paciente, protocolo, medico, exame, tipo_exame} of exames) {
 
-    await client.exames.create({
-      data: {
-        paciente,
-        protocolo,
-        medico,
-        exame,
-        tipo_exame
-      }
-    })
-  }
+  //   await client.exames.create({
+  //     data: {
+  //       paciente,
+  //       protocolo,
+  //       medico,
+  //       exame,
+  //       tipo_exame
+  //     }
+  //   })
+  //}
 
-  return response.json(exames);
+  return res.json(exames);
 })
 
 
