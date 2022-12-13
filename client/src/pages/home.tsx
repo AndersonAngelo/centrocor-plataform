@@ -5,61 +5,59 @@ export default function Home() {
     <div className="w-screen h-screen p-0 m-0 bg-linear-container">
       <div className="w-screen p-0 m-0">
         <Header />
-        <nav className="container-fluid d-flex flex-column">
-          <div className="content-list d-flex justify-content-evenly">
-            <ul className="d-flex flex-row">
-              <li className="d-flex align-items-center justify-content-center">
-                <a className="menu" href="sistema.php">
-                  Consultar exames
-                </a>
-              </li>
-              <li className="d-flex align-items-center justify-content-center">
-                <a className="menu" href="formulario.php">
-                  Cadastrar exames
-                </a>
-              </li>
-              <li className="d-flex align-items-center justify-content-center">
-                <a className="menu" href="usuarios.php">
-                  Cadastrar Usuarios
-                </a>
-              </li>
-              <li className="d-flex align-items-center justify-content-center">
-                <a className="menu" href="imprimir.php">
-                  Imprimir Exames
-                </a>
-              </li>
-              <li className="d-flex align-items-center justify-content-center">
-                <a className="menu" href="">
-                  frase Doctor
-                </a>
-              </li>
-              <li className="d-flex align-items-center justify-content-center">
-                <a className="menu" href="">
-                  Codigos de exames
-                </a>
-              </li>
-              <li className="d-flex align-items-center justify-content-center">
-                <a className="menu" href="importar.php">
-                  Importar
-                </a>
-              </li>
-              <li className="d-flex align-items-center justify-content-center">
-                <a className="menu" href="pdf.php">
-                  Gerar PDF
-                </a>
-              </li>
-              <li className="d-flex align-items-center justify-content-center">
-                <a className="menu" href="visualizar_arquivo.php">
-                  visualizar exames
-                </a>
-              </li>
-              <li className="d-flex align-items-center justify-content-center">
-                <a className="menu" href="resultado.php">
-                  Gerar Resultados
-                </a>
-              </li>
-            </ul>
-          </div>
+        <nav className="w-full">
+          <ul className="flex justify-between px-40 mt-5">
+            <li className="hover:scale-110 ease-in duration-200">
+              <a className="menu" href="sistema.php">
+                Consultar exames
+              </a>
+            </li>
+            <li className="hover:scale-110 ease-in duration-200">
+              <a className="menu" href="formulario.php">
+                Cadastrar exames
+              </a>
+            </li>
+            <li className="hover:scale-110 ease-in duration-200">
+              <a className="menu" href="usuarios.php">
+                Cadastrar Usuarios
+              </a>
+            </li>
+            <li className="hover:scale-110 ease-in duration-200">
+              <a className="menu" href="imprimir.php">
+                Imprimir Exames
+              </a>
+            </li>
+            <li className="hover:scale-110 ease-in duration-200">
+              <a className="menu" href="">
+                frase Doctor
+              </a>
+            </li>
+            <li className="hover:scale-110 ease-in duration-200">
+              <a className="menu" href="">
+                Codigos de exames
+              </a>
+            </li>
+            <li className="hover:scale-110 ease-in duration-200">
+              <a className="menu" href="importar.php">
+                Importar
+              </a>
+            </li>
+            <li className="hover:scale-110 ease-in duration-200">
+              <a className="menu" href="pdf.php">
+                Gerar PDF
+              </a>
+            </li>
+            <li className="hover:scale-110 ease-in duration-200">
+              <a className="menu" href="visualizar_arquivo.php">
+                visualizar exames
+              </a>
+            </li>
+            <li className="hover:scale-110 ease-in duration-200">
+              <a className="menu" href="resultado.php">
+                Gerar Resultados
+              </a>
+            </li>
+          </ul>
         </nav>
       </div>
 
