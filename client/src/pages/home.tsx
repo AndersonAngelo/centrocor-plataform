@@ -1,4 +1,5 @@
 import { Header } from "../components/Header";
+import { MagnifyingGlass } from "phosphor-react";
 
 export default function Home() {
   return (
@@ -61,21 +62,20 @@ export default function Home() {
         </nav>
       </div>
 
-      <div className="container-fuid d-flex flex-column align-items-center container-sistema">
-        <div className="box-search">
-          <input type="search" className="form-control" placeholder="Pesquisar" id="pesquisar" />
-          <button onClick={() => {}} className="btn btn-primary">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-search" viewBox="0 0 16 16">
-              <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
-            </svg>
-          </button>
-        </div>
-        <div className="Input">
-          <form className="d-flex align-items-center justify-content-center justify-content-around" method="POST" action="processa.php" encType="multipart/form-data">
-            <label>Buscar txt:</label>
-            <input type="file" name="arquivo" multiple required />
-            <input type="submit" value="importar" />
-          </form>
+      <div className="flex flex-col justify-items-center items-center gap-5">
+        <div className="">
+          <div className="flex flex-row justify-center items-center mt-20">
+            <input type="search" className="w-96 h-8" placeholder="Pesquisar" id="pesquisar" />
+            <button onClick={() => {}} className="ml-2 w-6 h-6">
+              <MagnifyingGlass size={24}/>
+            </button>
+          </div>
+          <div className="">
+            <form className="flex flex-row justify-items-center items-center" method="POST" action="processa.php" encType="multipart/form-data">
+              <input className="" type="file" name="arquivo" multiple required />
+              <input type="submit" value="importar" />
+            </form>
+          </div>
         </div>
         {/* <?php
         if (isset($_SESSION['msg'])) {
