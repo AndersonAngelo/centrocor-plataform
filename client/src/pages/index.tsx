@@ -6,6 +6,7 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import { Input } from "../components/Input";
 
 import logoImg from '../../public/imagens/Logo_CENTROCOR-01.png'
+import { Button } from "../components/Button";
 
 type UseProps = {
   name: string;
@@ -36,6 +37,7 @@ export default function Home() {
         <form onSubmit={handleSubmit(handleCreateUser)} className="mt-12">
           <Input error={errors.name} type="text" label="Nome" {...register('name')}/>
           <Input error={errors.password} type="password" label="Senha" {...register('password')}/>
+          <Button children="Enviar" />
         </form>
       </div>
     </main>      
