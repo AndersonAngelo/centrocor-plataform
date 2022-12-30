@@ -3,22 +3,22 @@ export function Menu() {
     <nav className="w-full">
       <ul className="flex justify-between px-40 mt-5">
         <li className="hover:scale-110 ease-in duration-200">
-          <a className="menu" href="sistema.php">
+          <a className="menu" href="">
             Consultar exames
           </a>
         </li>
         <li className="hover:scale-110 ease-in duration-200">
-          <a className="menu" href="formulario.php">
+          <a className="menu" href="">
             Cadastrar exames
           </a>
         </li>
         <li className="hover:scale-110 ease-in duration-200">
-          <a className="menu" href="usuarios.php">
+          <a className="menu" href="">
             Cadastrar Usuarios
           </a>
         </li>
         <li className="hover:scale-110 ease-in duration-200">
-          <a className="menu" href="imprimir.php">
+          <a className="menu" href="">
             Imprimir Exames
           </a>
         </li>
@@ -33,22 +33,22 @@ export function Menu() {
           </a>
         </li>
         <li className="hover:scale-110 ease-in duration-200">
-          <a className="menu" href="importar.php">
-            Importar
+          <a className="menu" href="">
+            Exportar
           </a>
         </li>
         <li className="hover:scale-110 ease-in duration-200">
-          <a className="menu" href="pdf.php">
+          <a className="menu" href="">
             Gerar PDF
           </a>
         </li>
         <li className="hover:scale-110 ease-in duration-200">
-          <a className="menu" href="visualizar_arquivo.php">
+          <a className="menu" href="">
             visualizar exames
           </a>
         </li>
         <li className="hover:scale-110 ease-in duration-200">
-          <a className="menu" href="resultado.php">
+          <a className="menu" href="">
             Gerar Resultados
           </a>
         </li>

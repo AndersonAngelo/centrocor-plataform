@@ -25,12 +25,12 @@ export default function Home() {
               <MagnifyingGlass size={24}/>
             </button>
           </div>
-          <div className="mt-10">
+          {/* <div className="mt-10">
             <form className="flex flex-row justify-items-center items-center" method="POST" action="" encType="multipart/form-data">
               <input type="file" name="arquivo" multiple required />
               <input className="bg-zinc-200 ml-2 rounded-sm hover:bg-zinc-300 ease-in duration-100 px-1" type="submit" value="Enviar" />
             </form>
-          </div>
+          </div> */}
         </div>
         <div className="mt-10 w-screen flex justify-center">
           <table className="flex flex-col text-white border-b-2">
@@ -55,9 +55,9 @@ export default function Home() {
             </thead>
             <tbody>
               <tr>
-                {exams.map(() => {
+                {/* {exams.map(() => {
                   <td key={exams.id}>{exams}</td>
-                })}
+                })} */}
               </tr>
             </tbody>
           </table>
